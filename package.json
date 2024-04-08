@@ -1,0 +1,68 @@
+{
+  "name": "sse-fetch",
+  "version": "1.0.0",
+  "description": "use fetch",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "jsnext:main": "es/index.mjs",
+  "browser": "dist/fetchEventSource.min.js",
+  "typings": "./typings/index.d.ts",
+  "scripts": {
+    "test": "npx jest",
+    "build": "rm -rf dist es lib && rollup -c",
+    "postbuild": "uglifyjs dist/fetchEventSource.js -o dist/fetchEventSource.min.js",
+    "prepare": "npx husky install",
+    "docs": "npx typedoc src/*.ts"
+  },
+  "author": "leemotive <wstation@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/jest": "^29.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.2",
+    "jest": "^29.3.1",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rollup": "^3.7.3",
+    "rollup-plugin-dts": "^5.0.0",
+    "ts-jest": "^29.0.3",
+    "tslib": "^2.4.1",
+    "typedoc": "^0.23.22",
+    "typescript": "^4.9.4",
+    "uglify-js": "^3.17.4"
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "typings"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "eslint-module-utils": "^2.8.1",
+    "eslint-scope": "^7.2.2",
+    "eslint-visitor-keys": "^2.1.0",
+    "eslint-import-resolver-node": "^0.3.9"
+  },
+  "keywords": [
+    "fetch",
+    "EventSource"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leemotive/fetch-event-source.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leemotive/fetch-event-source/issues"
+  },
+  "homepage": "https://github.com/leemotive/fetch-event-source#readme"
+}
